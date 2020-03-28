@@ -23,8 +23,9 @@ map <LEADER><left> :vertical resize +5<CR>
 map <LEADER><right> :vertical resize -5<CR>
 
 map tt :tabe<CR>
-map tl :tabenext<CR>
-map th :-tabenext<CR>
+map tl :tabnext<CR>
+map th :-tabnext<CR>
+
 noremap H 5h
 noremap J 5j
 noremap K 5k
@@ -32,9 +33,18 @@ noremap L 5l
 
 " configuration
 syntax on
+set nocompatible
+filetype on
+filetype indent on
+filetype plugin on
+filetype plugin indent on
+set encoding=utf-8
+"set &t_ut=''
 set number
 set relativenumber
+set showmatch
 set ruler
+set laststatus=2
 set showmatch
 set hlsearch
 exec "nohlsearch"
@@ -43,10 +53,22 @@ set ignorecase
 set smartcase
 set cursorline
 set wrap
+set linebreak
 set showcmd
 set wildmenu
 set tabstop=4
+set shiftwidth=4
+set expandtab
+set softtabstop=2
 set backspace=2
+set scrolloff=5
+set backspace=indent,eol,start
+set list
+set listchars=tab:▸\ ,trail:▫
+set autochdir
+au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+
+
 " plug
 call plug#begin('~/.config/vim/plugged')
 
