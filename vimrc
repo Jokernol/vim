@@ -59,7 +59,7 @@ set autoindent smartindent shiftround
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set softtabstop=2
+set softtabstop=4
 set backspace=2
 set scrolloff=5
 set backspace=indent,eol,start
@@ -130,6 +130,5 @@ Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'kana/vim-textobj-user'
 Plug 'fadein/vim-FIGlet'
-
 call plug#end()
 
