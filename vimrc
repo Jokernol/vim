@@ -33,23 +33,28 @@ noremap L 5l
 
 " configuration
 syntax on
-set nocompatible
 filetype on
 filetype indent on
 filetype plugin on
 filetype plugin indent on
+set nocompatible
 set encoding=utf-8
-"set &t_ut=''
+
+"better display
 set number
 set relativenumber
+set signcolumn=yes
 set showmatch
 set ruler
 set laststatus=2
+highlight clear SignColumn
+"better search
 set hlsearch
 exec "nohlsearch"
 set incsearch
 set ignorecase
 set smartcase
+
 set cursorline
 set wrap
 set linebreak
@@ -80,8 +85,8 @@ Plug 'vim-airline/vim-airline'
 "" Taglist
 "Plug 'majutsushi/tagbar', { 'on': 'TagbarOpenAutoClose' }
 "
-"" Error checking
-"Plug 'w0rp/ale'
+" Error checking
+Plug 'w0rp/ale'
 "
 " Auto Complete
 Plug 'Valloric/YouCompleteMe'
@@ -121,10 +126,11 @@ Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
 "" Other useful utilities
 "Plug 'terryma/vim-multiple-cursors'
 "Plug 'junegunn/goyo.vim' " distraction free writing mode
-"Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'`to change 'word' to `word`
+Plug 'tpope/vim-surround' " type ysks' to wrap the word with '' or type cs'`to change 'word' to `word`
 "Plug 'godlygeek/tabular' " type ;Tabularize /= to align the =
 "Plug 'gcmt/wildfire.vim' " in Visual mode, type i' to select all text in '',or type i) i] i} ip
 "Plug 'scrooloose/nerdcommenter' " in <space>cc to comment a line
+Plug 'airblade/vim-gitgutter'
 "
 "" Dependencies
 "Plug 'MarcWeber/vim-addon-mw-utils'
