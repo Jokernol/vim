@@ -50,7 +50,7 @@ set laststatus=2
 highlight clear SignColumn
 "better search
 set hlsearch
-exec "nohlsearch"
+exec ":nohlsearch"
 set incsearch
 set ignorecase
 set smartcase
@@ -136,3 +136,7 @@ if !has('nvim')
         call plug#end()
 endif
 
+if has('nvim')
+    call plug#begin('~/.config/vim/plugged')
+    call plug#end()
+endif
